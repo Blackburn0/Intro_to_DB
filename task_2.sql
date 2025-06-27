@@ -5,7 +5,7 @@ CREATE DATABASE IF NOT EXISTS Authors, author_name;
 USE alx_book_store;
 
 -- Create the books table
-CREATE TABLE books (
+CREATE TABLE Books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     genre VARCHAR(100),
@@ -22,7 +22,7 @@ CREATE TABLE authors (
 );
 
 -- Create the customers table
-CREATE TABLE customers (
+CREATE TABLE Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE customers (
 );
 
 -- Create the orders table
-CREATE TABLE orders (
+CREATE TABLE Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT NOT NULL,
     order_date DATE NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE orders (
 );
 
 -- Create the order_details table
-CREATE TABLE order_details (
+CREATE TABLE Order_details (
     order_detail_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL,
     book_id INT NOT NULL,
